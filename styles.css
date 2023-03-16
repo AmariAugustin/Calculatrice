@@ -1,0 +1,62 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: rgba(173, 255, 160, 0.667);
+}
+  
+.grid-main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    grid-template-areas: 
+    "display display"   
+    "second-buttons second-buttons"
+    "chiffre symbols";
+    grid-template-columns: 300px 100px;
+    grid-template-rows: -1px 1fr 1fr 1fr;
+    gap: 5px;
+}  
+  
+.grid-chiffre {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-area: chiffre;
+}
+  
+.grid-symbols {
+    display: grid;
+    grid-area: symbols;
+}
+
+.grid-second-buttons{
+    display:grid;
+    grid-template-columns: 202px 203px;
+    grid-template-rows: 100px;
+    grid-row-end: auto;
+    grid-column: 1 / span 3;
+    grid-area: second-buttons;
+}
+
+
+.grid-display {
+    grid-area: display;
+    background-color: #000000;
+    border: 1px solid #00ff22;
+    color:white;
+    font-size: 2rem;
+    height: 83px;
+    margin: 0px;
+    padding: 10px;
+    text-align: right;
+    width: calc(100% - 20px);
+  }
+  
+
+.grid-main button {
+    cursor: pointer;
+    font-size: 3rem;
+    color: aliceblue;
+    border: 1px solid green;
+    outline: none;
+    background-color: rgba(0, 55, 9, 0.337);
+}
